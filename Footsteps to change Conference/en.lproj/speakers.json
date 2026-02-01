@@ -1,0 +1,174 @@
+{
+  "speakers": [
+    {
+      "id": "nicola_butts",
+      "name": "Nicola Butts",
+      "title": "General Manager for Anaesthetics and Pain Management",
+      "organisation": "University Hospitals Birmingham",
+      "bio": "Nicola is an experienced operational leader with over 15 years of management expertise across the West Midlands health system. She is General Manager for Anaesthetics and Pain Management at University Hospitals Birmingham, providing strategic and operational leadership across consultant teams, specialist nurses and multidisciplinary professionals. Her work includes workforce planning, performance management, service redesign and leading large-scale operational programmes that enhance patient outcomes and staff experience.",
+      "email": "",
+      "social": "",
+      "photo": "nicola_butts.png"
+    },
+    {
+      "id": "professor_tony_avery_obe",
+      "name": "Professor Tony Avery OBE",
+      "title": "National Clinical Director for Prescribing, NHS England; Professor of Primary Health Care",
+      "organisation": "NHS England; University of Nottingham",
+      "bio": "Professor Tony Avery OBE is National Clinical Director for Prescribing for NHS England, a GP in Nottingham and Professor of Primary Health Care at the University of Nottingham. He is passionate about safe, effective and appropriate use of medicines and has led major studies on prescribing safety in the NHS, championing shared decision making and balancing benefits, risks, costs and environmental impact.",
+      "email": "tony.avery@nottingham.ac.uk",
+      "social": "@tonyavery.bsky.social; @TonyAvery1",
+      "photo": "tony_avery.png"
+    },
+    {
+      "id": "dr_laura_hissey",
+      "name": "Dr Laura Hissey",
+      "title": "LWwP Clinical Implementation Lead; Pain Psychology Lead",
+      "organisation": "Live Well with Pain; University Hospitals Birmingham NHS Trust",
+      "bio": "Dr Laura Hissey is a HCPC registered Practitioner Psychologist specialising in pain management. She is Clinical Implementation Lead at Live Well with Pain and Pain Psychology Lead at University Hospitals Birmingham. With 15+ years in multidisciplinary pain teams, she supports services to apply the Ten Footsteps Programme and provides specialist psychological assessment and interventions for long-term pain conditions.",
+      "email": "Laura.hissey@uhb.nhs.uk",
+      "social": "Facebook: Laura Hissey; LinkedIn: Dr Laura Hissey; X: @LauraChipchase",
+      "photo": "laura_hissey.png"
+    },
+    {
+      "id": "professor_nicole_tang",
+      "name": "Professor Nicole Tang",
+      "title": "Professor of Clinical and Health Psychology",
+      "organisation": "University of Warwick",
+      "bio": "Professor Nicole Tang is Professor of Psychology at the University of Warwick, where she directs the Warwick Sleep and Pain Laboratory. She is a registered clinical/health psychologist with extensive research experience in sleep, insomnia, chronic pain and mental health, using qualitative and quantitative methods to support treatment innovation.",
+      "email": "n.tang@warwick.ac.uk",
+      "social": "Bluesky: @nkytang.bsky.social; LinkedIn; Lab: https://warwick.ac.uk/saplab/",
+      "photo": "nicole_tang.png"
+    },
+    {
+      "id": "dr_mohamed_dorgham",
+      "name": "Dr Mohamed Dorgham",
+      "title": "Consultant in Pain Medicine and Anaesthesia; Acute Pain management lead",
+      "organisation": "University Hospitals Birmingham (UHB)",
+      "bio": "Dr Mohamed Dorgham is a consultant in anaesthesia with specialist focus in Pain Medicine at University Hospitals Birmingham. He provides multidisciplinary, evidence-based care for complex pain conditions, including interventional and minimally invasive techniques, and contributes to national research and education in interventional pain management.",
+      "email": "Mdorgham79@gmail.com",
+      "social": "Mohamed Dorgham",
+      "photo": "mohamed_dorgham.png"
+    },
+    {
+      "id": "dr_tim_williams",
+      "name": "Dr Tim Williams",
+      "title": "Clinical Director; Director",
+      "organisation": "Peak Health Coaching",
+      "bio": "Dr Tim Williams is Clinical Director and Director of Peak Health Coaching. A Sheffield medical graduate, he developed a coaching approach during his GP career supporting people with pain and long-term conditions. He co-founded Peak Health Coaching in 2017 and has helped train thousands of health and social care professionals in health coaching skills.",
+      "email": "tim@peakhealthcoaching.com",
+      "social": "LinkedIn: www.linkedin.com/in/tim-williams-1b842462/",
+      "photo": "tim_williams.png"
+    },
+    {
+      "id": "dr_asim_suleman",
+      "name": "Dr Asim Suleman",
+      "title": "General Practitioner; GPwER Pain Management",
+      "organisation": "Hollyns Health & Wellbeing; Bradford S&W MSK Service",
+      "bio": "Dr Asim Suleman is a GP Trainer, pain specialist and occupational health physician working in Bradford and Leeds. He has a long-standing interest in pain management and holds a Masters in Pain Management. He is involved in research, education and local pathway and guideline development, and is an MSK Champion for Versus Arthritis.",
+      "email": "Asim.suleman@bradford.nhs.uk",
+      "social": "LinkedIn: Dr Asim Suleman",
+      "photo": "asim_suleman.png"
+    },
+    {
+      "id": "professor_cormac_ryan",
+      "name": "Professor Cormac Ryan",
+      "title": "Professor of Clinical Rehabilitation",
+      "organisation": "Teesside University",
+      "bio": "Professor Cormac Ryan is Professor of Clinical Rehabilitation at Teesside University and a Community Pain Champion for the Flippin Pain Campaign. He co-leads PETAL, a multinational and multidisciplinary organisation improving modern pain science education, has published 100+ peer reviewed articles and delivers public engagement events to help people understand pain.",
+      "email": "c.ryan@tees.ac.uk",
+      "social": "",
+      "photo": "cormac_ryan.png"
+    },
+    {
+      "id": "professor_roger_knaggs",
+      "name": "Professor Roger Knaggs",
+      "title": "Professor of Pain Management; President",
+      "organisation": "University of Nottingham; British Pain Society",
+      "bio": "Professor Roger Knaggs is a clinical academic pharmacist with research interests in appropriate use of analgesic medicines and outcomes. He promotes the role of pharmacy in pain management and is President of the British Pain Society. He is also a member of the Advisory Council on the Misuse of Drugs and has associations with several UK healthcare policy organisations.",
+      "email": "Roger.knaggs@nottingham.ac.uk",
+      "social": "LinkedIn: https://www.linkedin.com/in/roger-knaggs-53818020/",
+      "photo": "roger_knaggs.png"
+    },
+    {
+      "id": "professor_tamar_pincus",
+      "name": "Professor Tamar Pincus",
+      "title": "Professor of Health Psychology",
+      "organisation": "University of Southampton",
+      "bio": "Professor Tamar Pincus is a chartered psychologist and Professor in Health Psychology. Her research into psychological aspects of chronic pain spans 30+ years and has influenced guidelines and practice. Her work explores mechanisms, risk over time, trials and qualitative insights, and includes training practitioners in effective communication and psychologically informed practice.",
+      "email": "t.pincus@soton.ac.uk",
+      "social": "",
+      "photo": "tamar_pincus.png"
+    },
+    {
+      "id": "darrell_price",
+      "name": "Darrell Price",
+      "title": "Lived Experience Trainer; Founder, Pain Inspired",
+      "organisation": "Live Well with Pain; Pain Inspired (Chesterfield)",
+      "bio": "Darrell has lived with persistent chronic back pain for over a decade. Inspired by the Live Well with Pain Ten Footsteps programme, he retrained to help others and founded Pain Inspired in Chesterfield, now Derbyshire’s largest peer-to-peer pain support group. He created an eight‑week course based on Ten Footsteps and works with local and national organisations to improve pain support, while sharing lived experience with healthcare professionals.",
+      "email": "",
+      "social": "",
+      "photo": "darrell_price.png"
+    },
+    {
+      "id": "tim_atkinson",
+      "name": "Tim Atkinson",
+      "title": "Expert by Experience; Vice-Chair, Expert Patient and Carer Panel",
+      "organisation": "British Pain Society; Live Well with Pain; Pain Concern; Physiotherapy Pain Association",
+      "bio": "Tim Atkinson has lived with chronic pain for over thirty years. He is Vice-Chair of the British Pain Society’s Expert Patient and Carer Panel and a lived-experience trainer with Live Well with Pain. He volunteers with Pain Concern, represents patients for the Physiotherapy Pain Association, has co-authored academic research and supported the Flippin’ Pain public information campaign. In 2021 he published his memoir, Where Does it Hurt?",
+      "email": "",
+      "social": "",
+      "photo": "tim_atkinson.png"
+    },
+    {
+      "id": "sue_crisfield",
+      "name": "Sue Crisfield",
+      "title": "Social Prescribing Coordinator",
+      "organisation": "Primary Care Network (South Somerset)",
+      "bio": "Sue Crisfield lives in Somerset and has been a Social Prescribing Coordinator since 2019 within a Primary Care Network of five GP surgeries in South Somerset. She works closely with the voluntary, community, faith and social enterprise sector and partners with organisations to create local groups and activities supporting health and wellbeing. Sue lives with osteoarthritis and Burning Mouth Syndrome and is passionate about supporting people to live well with pain. She has developed PCN-wide 10 Footsteps groups, monthly Live Well with Pain cafés, health walks and Tai Chi Qi Gong classes.",
+      "email": "",
+      "social": "",
+      "photo": "sue_crisfield.png"
+    },
+    {
+      "id": "mark_angathangelou",
+      "name": "Mark Angathangelou",
+      "title": "Lived Experience Partner; Lived Experience Trainer",
+      "organisation": "British Pain Society; NHS England; Live Well with Pain; Bridges Self Management",
+      "bio": "Mark Angathangelou lives with long-term chronic nerve pain and has a background in publishing. After attending a pain management programme in 2018, he became active in lived experience partner work. He helped set up CamPain in Camden and has held multiple NHS LEP roles including chairing Camden’s patient engagement committee and serving as a patient representative in North Central London. He has also worked with NHS England’s National MSK and Experience of Care teams. Mark is currently a member of the British Pain Society’s Expert Patient & Carer Committee and trains NHS teams on chronic pain and supported self-management.",
+      "email": "",
+      "social": "",
+      "photo": "mark_angathangelou.png"
+    },
+    {
+      "id": "su_madden",
+      "name": "Su Madden",
+      "title": "Founder, Durham’s Haven Pain Café; Lived Experience Trainer",
+      "organisation": "Live Well with Pain; Fibromyalgia Action UK (FMAUK)",
+      "bio": "Su Madden has managed chronic pain for 14 years and was medically retired from work. She founded Durham’s Haven Pain Café, now running for eight years with 223 members. Su is a Lived Experience Trainer with Live Well with Pain and Assistant Regional Coordinator (North East England) with Fibromyalgia Action UK. She works with local GPs and social prescribers who refer patients to the café, and delivers the Ten Footsteps to Living Well with Pain programme alongside other support activities.",
+      "email": "",
+      "social": "",
+      "photo": "su_madden.png"
+    },
+    {
+      "id": "dr_emma_davies",
+      "name": "Dr Emma Davies",
+      "title": "Principal Pharmacist for Pain, Analgesic Stewardship and Harm Reduction; Co-founder",
+      "organisation": "Health Board in South Wales; Live Well with Pain",
+      "bio": "Dr Emma Davies is Principal Pharmacist for pain, analgesic stewardship and harm reduction for a Health Board in South Wales. She has worked in pain management since the mid‑2000s, developing interests in analgesic stewardship and supported self‑management in multidisciplinary pain services. Emma supports pain management across primary and secondary care, teaches at undergraduate and postgraduate level, and develops guidelines and educational materials. She was a lead author for All Wales analgesic stewardship and prescribing guidelines and contributed to NICE guidance on safe prescribing and withdrawal of dependence‑forming medicines. Alongside Dr Frances Cole, she co‑founded Live Well with Pain.",
+      "email": "",
+      "social": "",
+      "photo": "emma_davies.png"
+    },
+    {
+      "id": "rachel_stovell",
+      "name": "Rachel Stovell",
+      "title": "Specialist Physiotherapist in Pain (Freelance)",
+      "organisation": "Live Well with Pain",
+      "bio": "Rachel Stovell is a Specialist Physiotherapist in Pain, currently working freelance alongside travel. She was lead physiotherapist in the Facial Pain Team at the Eastman Dental Hospital and an Advanced Practitioner Physiotherapist at University College London Hospital Pain Management Centre. Qualifying in 1993, she specialised in MSK across the NHS, occupational health, private sector and her own practice. Her interest in persistent pain led her to complete an MSc in Pain Science and Society at King’s College London and move into specialist NHS pain services. Rachel has particular interests in orofacial pain, the role of movement in pain experiences and pain neuroscience, and is committed to improving understanding and support for people living with persistent pain.",
+      "email": "",
+      "social": "",
+      "photo": "rachel_stovell.png"
+    }
+  ]
+}
