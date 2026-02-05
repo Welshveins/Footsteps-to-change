@@ -1,8 +1,13 @@
-//
-//  File.swift
-//  Footsteps to change Conference
-//
-//  Created by Chris Davies on 02/02/2026.
-//
+import SwiftUI
 
-import Foundation
+struct RootView: View {
+    @AppStorage("hasEnteredApp") private var hasEnteredApp: Bool = false
+
+    var body: some View {
+        if hasEnteredApp {
+            HomeHubView()
+        } else {
+            LandingView()
+        }
+    }
+}

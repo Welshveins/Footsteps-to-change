@@ -1,8 +1,13 @@
-//
-//  FloorPlanView.swift
-//  Footsteps to change Conference
-//
-//  Created by Chris Davies on 01/02/2026.
-//
+import SwiftUI
 
-import Foundation
+struct FloorPlanView: View {
+    var body: some View {
+        PlaceholderPage(
+            title: "Floor Plan",
+            message: "Venue floor plan will appear here. Pinch to zoom."
+        )
+        .navigationTitle("Floor Plan")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar { NavBrandLogo() }
+    }
+}
