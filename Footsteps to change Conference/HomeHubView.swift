@@ -97,11 +97,7 @@ struct HomeHubView: View {
                             HubTile(title: "Certificate", icon: "doc.text")
                         }
 
-                        NavigationLink {
-                            UpcomingEventsView()
-                        } label: {
-                            HubTile(title: "Teaching Events", icon: "graduationcap")
-                        }
+                        
 
                         NavigationLink {
                             AbstractsView()
