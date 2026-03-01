@@ -1,5 +1,26 @@
 import SwiftUI
 
+// MARK: - Premium card styling (Pro Move #1)
+extension View {
+    /// Consistent “studio” card depth + rounded style.
+    func premiumCard(cornerRadius: CGFloat = 20) -> some View {
+        self
+            .background(Color.cardBackground)
+            .cornerRadius(cornerRadius)
+            .shadow(color: .black.opacity(0.04), radius: 20, x: 0, y: 10)
+            .shadow(color: .black.opacity(0.03), radius: 4, x: 0, y: 2)
+    }
+}
+
+// MARK: - Press feedback (Pro Move #3)
+struct PressableCard: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.97 : 1)
+            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+    }
+}
+
 // MARK: - Home Hub Tile
 struct HubTile: View {
     let title: String
@@ -18,13 +39,12 @@ struct HubTile: View {
                 .padding(.horizontal, 6)
         }
         .frame(maxWidth: .infinity, minHeight: 110)
-        .background(Color.cardBackground)
-        .cornerRadius(18)
+        .premiumCard(cornerRadius: 22) // upgraded depth + roundness
         .overlay(
-            RoundedRectangle(cornerRadius: 18)
+            RoundedRectangle(cornerRadius: 22)
                 .stroke(Color.dividerGrey, lineWidth: 1)
         )
-        .shadow(color: .black.opacity(0.06), radius: 6, x: 0, y: 3)
+        .contentShape(RoundedRectangle(cornerRadius: 22)) // better tap target
     }
 }
 
@@ -69,13 +89,11 @@ struct PlaceholderPage: View {
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.cardBackground)
-            .cornerRadius(18)
+            .premiumCard(cornerRadius: 22) // upgraded depth + roundness
             .overlay(
-                RoundedRectangle(cornerRadius: 18)
+                RoundedRectangle(cornerRadius: 22)
                     .stroke(Color.dividerGrey, lineWidth: 1)
             )
-            .shadow(color: .black.opacity(0.05), radius: 6, x: 0, y: 2)
             .padding()
         }
         .background(Color.appBackground)
@@ -84,4 +102,3 @@ struct PlaceholderPage: View {
         .toolbar { NavBrandLogo() }
     }
 }
-

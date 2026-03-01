@@ -12,17 +12,37 @@ struct HomeHubView: View {
             ScrollView {
                 VStack(spacing: 20) {
 
-                    // MARK: – Welcome / Header
-                    VStack(alignment: .leading, spacing: 8) {
+                    // MARK: – Welcome / Header (polished)
+                    VStack(alignment: .leading, spacing: 6) {
+
                         Text("Footsteps to Change")
-                            .font(.largeTitle.bold())
+                            .font(.system(size: 34, weight: .bold))
                             .foregroundColor(.primaryBlue)
 
                         Text("Conference 2026")
-                            .font(.headline)
+                            .font(.title3)
                             .foregroundColor(.secondaryText)
+
                     }
+                    .padding(20)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                        LinearGradient(
+                            colors: [
+                                Color.primaryBlue.opacity(0.12),
+                                Color.primaryBlue.opacity(0.04)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .cornerRadius(24)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(Color.dividerGrey, lineWidth: 1)
+                    )
+                    .shadow(color: .black.opacity(0.04), radius: 18, x: 0, y: 10)
+                    .shadow(color: .black.opacity(0.03), radius: 4, x: 0, y: 2)
                     .padding(.horizontal)
 
                     // MARK: – Welcome card (links to full Welcome page)
@@ -82,10 +102,16 @@ struct HomeHubView: View {
                         } label: {
                             HubTile(title: "Teaching Events", icon: "graduationcap")
                         }
+
                         NavigationLink {
-                            FarewellView()
+                            AbstractsView()
                         } label: {
-                            HubTile(title: "Farewell", icon: "heart")
+                            HubTile(title: "Abstracts", icon: "doc.text.magnifyingglass")
+                        }
+                        NavigationLink {
+                            SponsorsView()
+                        } label: {
+                            HubTile(title: "Sponsors", icon: "star")
                         }                    }
                     .padding(.horizontal)
 
@@ -139,4 +165,3 @@ struct WelcomeCardPreview: View {
         .shadow(color: .black.opacity(0.05), radius: 6, x: 0, y: 2)
     }
 }
-

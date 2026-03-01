@@ -1,0 +1,56 @@
+{
+  "organisation": {
+    "name": "Pure Unity Health",
+    "type": "NHS Partner",
+    "establishedPartnership": 2016,
+    "overview": "Pure Unity Health has been a leading NHS partner providing First Contact Practitioners and wider clinical services integrating with Primary Care since 2016.",
+    "missionFocus": "Collaborative, community-based solutions integrating closely with Primary Care Networks, Neighbourhood teams, GP Federations and ICBs."
+  },
+  "services": {
+    "coreServices": [
+      "First Contact Physiotherapists",
+      "Health and Wellbeing Coaches",
+      "Social Prescribers"
+    ],
+    "approach": "Prevention-focused support to promote long-term wellbeing and health before illness develops.",
+    "careModel": {
+      "description": "Scalable, community-integrated care models optimising clinical pathways with data intelligence.",
+      "outcomes": [
+        "Enhanced population health",
+        "Preventative strategies",
+        "Reduced demand on healthcare services"
+      ]
+    }
+  },
+  "specialistPainServices": {
+    "background": "Extensive experience supporting MSK patients with persistent pain.",
+    "programmes": [
+      {
+        "name": "Long-Term Conditions Coaching Service",
+        "type": "Evidence-based, scalable coaching model"
+      },
+      {
+        "name": "Primary Care Pain Support Service",
+        "fundingModel": "Fully reimbursable via ARRS",
+        "targetGroup": "Individuals attending primary care with persistent pain"
+      }
+    ],
+    "serviceDesign": {
+      "structure": "Comprehensive modular pain service tailored to individual patient needs.",
+      "aim": "Facilitate long-term, meaningful change by addressing risk factors early."
+    },
+    "philosophy": {
+      "corePrinciple": "Empowering individuals to take control and ownership of persistent pain management.",
+      "methods": [
+        "Coaching",
+        "Education",
+        "Targeted interventions"
+      ],
+      "goals": [
+        "Maximise resilience",
+        "Improve wellbeing and happiness",
+        "Reduce healthcare system demand"
+      ]
+    }
+  }
+}

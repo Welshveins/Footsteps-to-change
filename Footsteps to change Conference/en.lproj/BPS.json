@@ -1,0 +1,26 @@
+{
+  "organisation": {
+    "name": "The British Pain Society",
+    "abbreviation": "BPS",
+    "scope": "United Kingdom",
+    "type": "Multidisciplinary professional organisation",
+    "overview": "The British Pain Society (BPS) is the UK’s largest multidisciplinary professional organisation dedicated to improving pain care.",
+    "membership": {
+      "description": "Members span medicine, health, and research.",
+      "sharedCommitment": "Advancing pain care through education, advocacy, and collaboration."
+    }
+  },
+  "missionAndVision": {
+    "vision": "Helping people live well with pain.",
+    "coreFocus": [
+      "Promoting high-quality education",
+      "Building professional capacity through resources and training",
+      "Advocating for pain recognition as a major public health issue"
+    ]
+  },
+  "approach": {
+    "collaboration": "Working closely with people living with pain to ensure lived experience shapes priorities and impact.",
+    "partnerships": "Developing strong partnerships to support innovation and raise standards of care.",
+    "equity": "Championing equitable access to effective pain management across the UK."
+  }
+}

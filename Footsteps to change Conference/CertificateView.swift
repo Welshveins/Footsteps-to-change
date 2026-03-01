@@ -23,7 +23,7 @@ struct CertificateView: View {
     // Asset names MUST match exactly
     private let logoAssetName = "conferenceLogo"
     private let emmaSignatureAssetName = "emma_signature"
-    private let lauraSignatureAssetName: String? = nil // add later e.g. "laura_signature"
+    private let lauraSignatureAssetName: String? = "laura_signature" // ✅ NOW ENABLED
 
     var body: some View {
         ScrollView {
@@ -235,7 +235,6 @@ struct CertificateView: View {
         DispatchQueue.global(qos: .userInitiated).async {
             autoreleasepool {
 
-                // build pdf (Data only exists inside autoreleasepool)
                 let data = CertificatePDFRenderer.makePDF(
                     attendeeName: name,
                     attendeeOrg: attendeeOrg.trimmed,
@@ -243,7 +242,7 @@ struct CertificateView: View {
                     venueLine: venueLine,
                     logoAssetName: logoAssetName,
                     emmaSignatureAssetName: emmaSignatureAssetName,
-                    lauraSignatureAssetName: lauraSignatureAssetName
+                    lauraSignatureAssetName: lauraSignatureAssetName // ✅ now passed through
                 )
 
                 if data.isEmpty {
@@ -254,12 +253,12 @@ struct CertificateView: View {
                     return
                 }
 
-                // write to temp file and only keep URL
-                let url = writePDFToTemporaryFile(data: data,
-                                                 fileName: "Certificate - \(safeFileComponent(name)).pdf")
+                let url = writePDFToTemporaryFile(
+                    data: data,
+                    fileName: "Certificate - \(safeFileComponent(name)).pdf"
+                )
 
                 DispatchQueue.main.async {
-                    // remove old file if any
                     if let oldURL { try? FileManager.default.removeItem(at: oldURL) }
 
                     self.pdfURL = url
@@ -298,9 +297,9 @@ struct PDFKitPreviewURL: UIViewRepresentable {
     func makeUIView(context: Context) -> PDFView {
         let v = PDFView()
         v.autoScales = true
-        v.displayMode = .singlePage // lighter than continuous
+        v.displayMode = .singlePage
         v.displayDirection = .vertical
-        v.usePageViewController(false) // reduces memory spikes
+        v.usePageViewController(false)
         v.backgroundColor = .clear
         return v
     }
@@ -349,7 +348,7 @@ enum CertificatePDFRenderer {
 
             var cursorY = cardRect.minY + 28
 
-            // Logo (thumbnail decode)
+            // Logo
             if let logo = loadThumbnail(assetName: logoAssetName, targetSize: CGSize(width: 140, height: 140)) {
                 let rect = CGRect(x: pageSize.width/2 - 35, y: cursorY, width: 70, height: 70)
                 logo.draw(in: rect)
@@ -375,27 +374,24 @@ enum CertificatePDFRenderer {
 
             cursorY += 28
 
-            // MARK: - Body (tighter professional spacing)
-
+            // Body
             cursorY = drawCenteredText(
                 "This certifies that",
-                font: .systemFont(ofSize: 17), // slightly smaller = more elegant
+                font: .systemFont(ofSize: 17),
                 color: UIColor(Color.secondaryText),
                 y: cursorY,
                 pageWidth: pageSize.width
             )
 
-            // ⭐ Name now matches title size
             cursorY = drawCenteredText(
                 attendeeName,
-                font: .systemFont(ofSize: 30, weight: .bold), // SAME as Certificate title
+                font: .systemFont(ofSize: 30, weight: .bold),
                 color: UIColor(Color.primaryText),
-                y: cursorY + 2, // tighter gap
+                y: cursorY + 2,
                 pageWidth: pageSize.width
             )
 
             if !attendeeOrg.isEmpty {
-
                 cursorY = drawCenteredText(
                     attendeeOrg,
                     font: .systemFont(ofSize: 16, weight: .medium),
@@ -409,7 +405,7 @@ enum CertificatePDFRenderer {
                 "has attended the conference.",
                 font: .systemFont(ofSize: 17),
                 color: UIColor(Color.secondaryText),
-                y: cursorY + 4, // MUCH tighter
+                y: cursorY + 4,
                 pageWidth: pageSize.width
             )
 
@@ -437,14 +433,13 @@ enum CertificatePDFRenderer {
             drawSignature(
                 name: "Laura Hissey",
                 role: "Conference Organiser",
-                asset: lauraSignatureAssetName,
+                asset: lauraSignatureAssetName, // ✅ will draw if asset exists
                 xCenter: cardRect.midX + 180,
                 y: sigY
             )
         }
     }
 
-    // Decode as thumbnail to avoid huge image decompression
     private static func loadThumbnail(assetName: String, targetSize: CGSize) -> UIImage? {
         guard let img = UIImage(named: assetName) else { return nil }
         return img.preparingThumbnail(of: targetSize) ?? img

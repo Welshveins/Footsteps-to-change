@@ -1,7 +1,96 @@
-/* 
-  teaching_events.json
-  Footsteps to change Conference
+{
+  "events": [
+    {
+      "id": "ten_footsteps_2026_A_s1",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort A, Session 1)",
+      "date": "2026-02-25",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort A — Session 1 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "ten_footsteps_2026_A_s2",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort A, Session 2)",
+      "date": "2026-03-11",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort A — Session 2 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "ten_footsteps_2026_A_s3",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort A, Session 3)",
+      "date": "2026-03-25",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort A — Session 3 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
 
-  Created by Chris Davies on 05/02/2026.
-  
-*/
+    {
+      "id": "ten_footsteps_2026_B_s1",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort B, Session 1)",
+      "date": "2026-04-23",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort B — Session 1 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "ten_footsteps_2026_B_s2",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort B, Session 2)",
+      "date": "2026-05-07",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort B — Session 2 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "ten_footsteps_2026_B_s3",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort B, Session 3)",
+      "date": "2026-05-21",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort B — Session 3 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+
+    {
+      "id": "ten_footsteps_2026_C_s1",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort C, Session 1)",
+      "date": "2026-06-10",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort C — Session 1 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "ten_footsteps_2026_C_s2",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort C, Session 2)",
+      "date": "2026-06-24",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort C — Session 2 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "ten_footsteps_2026_C_s3",
+      "title": "Ten Footsteps – 12 Hour Training Programme (Cohort C, Session 3)",
+      "date": "2026-07-08",
+      "venue": "Venue TBC",
+      "city": "UK",
+      "details": "Three-session programme. Cohort C — Session 3 of 3.",
+      "link": "https://www.eventbrite.co.uk/e/ten-footsteps-12-hour-training-programme-tickets-1975236745277?aff=ebdsoporgprofile"
+    },
+    {
+      "id": "nutrition_persistent_pain_2026",
+      "title": "Supporting People with Persistent Pain – Nutrition in Practice",
+      "date": "2026-04-27",
+      "venue": "Online",
+      "city": "Virtual",
+      "details": "A focused training session exploring the role of nutrition in supporting people living with persistent pain. Designed for healthcare professionals seeking practical, evidence-informed strategies.",
+      "link": "https://www.eventbrite.co.uk/e/supporting-people-with-persistent-pain-nutrition-in-practice-tickets-1729462993369"
+    }
+  ]
+}

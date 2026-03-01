@@ -5,10 +5,13 @@ struct FeedbackView: View {
     // This is what gates the certificate page
     @AppStorage("feedbackComplete") private var feedbackComplete: Bool = false
 
-    // Put the organiser’s public MS Forms link here
-    private let feedbackURLString = "https://forms.office.com/"   // <- replace with full public link
+    // STEP 1: Public MS Forms URL
+    private let feedbackURL = URL(string:
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAQ_9woZUOVlETzBQT0EwNFRHWE9HTjdOQVhOV1c1US4u"
+    )!
 
-    @Environment(\.openURL) private var openURL
+    // STEP 3: Sheet state
+    @State private var showFeedbackSheet = false
 
     var body: some View {
         ScrollView {
@@ -33,12 +36,12 @@ struct FeedbackView: View {
                             .foregroundColor(.primaryText)
                     }
 
-                    Text("Tap below to open the Microsoft Form in your browser.")
+                    Text("This form opens securely inside the app.")
                         .foregroundColor(.secondaryText)
 
+                    // STEP 2: Replace openURL with in-app sheet
                     Button {
-                        guard let url = URL(string: feedbackURLString) else { return }
-                        openURL(url)
+                        showFeedbackSheet = true
                     } label: {
                         HStack {
                             Text("Open feedback form")
@@ -50,7 +53,7 @@ struct FeedbackView: View {
                         .foregroundColor(.primaryBlue)
                         .padding(.vertical, 12)
                         .padding(.horizontal, 14)
-                        .background(Color.softBlueCard)
+                        .background(Color.appBackground) // light blue feel, matches your theme
                         .cornerRadius(14)
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
@@ -59,7 +62,7 @@ struct FeedbackView: View {
                     }
                     .buttonStyle(.plain)
 
-                    Text(feedbackURLString)
+                    Text(feedbackURL.absoluteString)
                         .font(.footnote)
                         .foregroundColor(.secondaryText)
                         .lineLimit(1)
@@ -84,15 +87,14 @@ struct FeedbackView: View {
                     Text("Required to unlock your certificate.")
                         .foregroundColor(.secondaryText)
 
-                    // This is the ONLY toggle on the page
                     Toggle(isOn: $feedbackComplete) {
-                        Text("I have completed the feedback form")
+                        Text("I confirm I have submitted the feedback form")
                             .font(.headline)
                             .foregroundColor(.primaryText)
                     }
                     .tint(.primaryBlue)
                     .padding(12)
-                    .background(Color.softBlueCard)          // makes “off” state visible
+                    .background(Color.appBackground) // off-state visible, still on-brand
                     .cornerRadius(14)
                     .overlay(
                         RoundedRectangle(cornerRadius: 14)
@@ -116,6 +118,20 @@ struct FeedbackView: View {
         .navigationTitle("Feedback")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { NavBrandLogo() }
-        .preferredColorScheme(.light) // keeps the app on-brand even if phone is in Dark Mode
+        .preferredColorScheme(.light)
+
+        // STEP 4: Present the in-app form
+        .sheet(isPresented: $showFeedbackSheet) {
+            NavigationStack {
+                FeedbackWebView(url: feedbackURL)
+                    .navigationTitle("Feedback Form")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("Done") { showFeedbackSheet = false }
+                        }
+                    }
+            }
+        }
     }
 }
