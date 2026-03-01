@@ -2,25 +2,65 @@
   "organisation": {
     "name": "The British Pain Society",
     "abbreviation": "BPS",
+    "type": "Multidisciplinary Professional Organisation",
     "scope": "United Kingdom",
-    "type": "Multidisciplinary professional organisation",
     "overview": "The British Pain Society (BPS) is the UK’s largest multidisciplinary professional organisation dedicated to improving pain care.",
-    "membership": {
-      "description": "Members span medicine, health, and research.",
-      "sharedCommitment": "Advancing pain care through education, advocacy, and collaboration."
+    "missionFocus": "Our members span medicine, health, and research, united by a commitment to advancing care through education, advocacy, and collaboration."
+  },
+  "services": {
+    "coreServices": [
+      "Education",
+      "Advocacy",
+      "Professional collaboration",
+      "Partnership development",
+      "Standards development"
+    ],
+    "approach": "We work closely with people living with pain to ensure their voices shape our priorities and impact.",
+    "careModel": {
+      "description": "Through strong partnerships, we support innovation, raise standards of care, and champion equitable access to effective pain management across the UK.",
+      "outcomes": [
+        "Improved pain care",
+        "Innovation in pain services",
+        "Raised standards of care",
+        "Equitable access to effective pain management across the UK"
+      ]
     }
   },
-  "missionAndVision": {
-    "vision": "Helping people live well with pain.",
-    "coreFocus": [
-      "Promoting high-quality education",
-      "Building professional capacity through resources and training",
-      "Advocating for pain recognition as a major public health issue"
-    ]
-  },
-  "approach": {
-    "collaboration": "Working closely with people living with pain to ensure lived experience shapes priorities and impact.",
-    "partnerships": "Developing strong partnerships to support innovation and raise standards of care.",
-    "equity": "Championing equitable access to effective pain management across the UK."
+  "specialistPainServices": {
+    "background": "Aligned with our vision to help people live well with pain.",
+    "programmes": [
+      {
+        "name": "High-Quality Education Promotion",
+        "description": "Promotes high-quality education in pain care."
+      },
+      {
+        "name": "Professional Capacity Building",
+        "description": "Builds professional capacity through resources and training."
+      },
+      {
+        "name": "Public Health Advocacy",
+        "description": "Advocates for pain to be recognised as a major public health issue."
+      }
+    ],
+    "serviceDesign": {
+      "structure": "Multidisciplinary professional collaboration spanning medicine, health, and research.",
+      "aim": "Advancing care through education, advocacy, collaboration, and lived-experience engagement."
+    },
+    "philosophy": {
+      "corePrinciple": "Helping people live well with pain.",
+      "methods": [
+        "Education",
+        "Advocacy",
+        "Collaboration",
+        "Partnership working",
+        "Lived-experience engagement"
+      ],
+      "goals": [
+        "Advance pain care",
+        "Strengthen professional capability",
+        "Recognise pain as a major public health issue",
+        "Improve outcomes for people living with pain"
+      ]
+    }
   }
 }

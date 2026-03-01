@@ -4,7 +4,7 @@
     "type": "NHS Partner",
     "establishedPartnership": 2016,
     "overview": "Pure Unity Health has been a leading NHS partner providing First Contact Practitioners and wider clinical services integrating with Primary Care since 2016.",
-    "missionFocus": "Collaborative, community-based solutions integrating closely with Primary Care Networks, Neighbourhood teams, GP Federations and ICBs."
+    "missionFocus": "Our services focus on collaborative, community-based solutions integrating closely with Primary Care Networks, Neighbourhood teams, GP Federations and ICB’s."
   },
   "services": {
     "coreServices": [
@@ -12,44 +12,45 @@
       "Health and Wellbeing Coaches",
       "Social Prescribers"
     ],
-    "approach": "Prevention-focused support to promote long-term wellbeing and health before illness develops.",
+    "approach": "Our experienced teams of First Contact Physiotherapists, Health and Wellbeing Coaches and Social Prescribers all aim to prioritise prevention to support long-term well-being and health before illness takes hold.",
     "careModel": {
-      "description": "Scalable, community-integrated care models optimising clinical pathways with data intelligence.",
+      "description": "We work collaboratively helping to deliver scalable, community-integrated care models, optimising clinical pathways with data intelligence, and significantly enhancing population health through preventative strategies.",
       "outcomes": [
+        "Collaborative community-integrated care",
+        "Optimised clinical pathways",
         "Enhanced population health",
-        "Preventative strategies",
-        "Reduced demand on healthcare services"
+        "Preventative health strategies"
       ]
     }
   },
   "specialistPainServices": {
-    "background": "Extensive experience supporting MSK patients with persistent pain.",
+    "background": "Our long experience of working with MSK patients with persistent pain has led us to develop a scalable, evidence-based Long-Term Conditions Coaching Service and a dedicated Primary Care Pain Support service fully reimbursable via ARRS and targeted at people who attend primary care with persistent pain, with the ambition of addressing risk factors earlier.",
     "programmes": [
       {
         "name": "Long-Term Conditions Coaching Service",
-        "type": "Evidence-based, scalable coaching model"
+        "description": "A scalable, evidence-based service developed from extensive experience supporting MSK patients with persistent pain."
       },
       {
         "name": "Primary Care Pain Support Service",
-        "fundingModel": "Fully reimbursable via ARRS",
-        "targetGroup": "Individuals attending primary care with persistent pain"
+        "description": "A dedicated service fully reimbursable via ARRS, targeted at people who attend primary care with persistent pain, with the ambition of addressing risk factors earlier."
       }
     ],
     "serviceDesign": {
-      "structure": "Comprehensive modular pain service tailored to individual patient needs.",
-      "aim": "Facilitate long-term, meaningful change by addressing risk factors early."
+      "structure": "Our comprehensive modular pain service is based on individual patient needs to facilitate long term, meaningful change.",
+      "aim": "To address risk factors earlier and support sustainable improvement for individuals living with persistent pain."
     },
     "philosophy": {
-      "corePrinciple": "Empowering individuals to take control and ownership of persistent pain management.",
+      "corePrinciple": "Our key focus is to empower people to manage persistent pain in a way which allows them to have control and ownership of the challenges they may face.",
       "methods": [
         "Coaching",
         "Education",
-        "Targeted interventions"
+        "A variety of targeted interventions"
       ],
       "goals": [
-        "Maximise resilience",
-        "Improve wellbeing and happiness",
-        "Reduce healthcare system demand"
+        "Maximising individuals’ resilience",
+        "Maximising happiness",
+        "Reduced demand on the healthcare system",
+        "Long-term meaningful change"
       ]
     }
   }
