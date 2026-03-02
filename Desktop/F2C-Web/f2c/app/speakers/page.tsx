@@ -9,8 +9,13 @@ type Speaker = {
   role?: string;
   title?: string;
   organisation?: string;
-  bio?: string;
-  profile?: string;
+
+  // common fields we’ve seen
+  bio?: unknown;
+  profile?: unknown;
+
+  // sometimes extra fields exist
+  sections?: unknown;
 };
 
 type SpeakersPayload =
@@ -24,6 +29,32 @@ function safeString(v: unknown): string {
   return typeof v === "string" ? v : "";
 }
 
+function isStringArray(v: unknown): v is string[] {
+  return Array.isArray(v) && v.every((x) => typeof x === "string");
+}
+
+function textFromUnknown(v: unknown): string {
+  // Handles: string, ["para1","para2"], {a:"...", b:"..."} etc.
+  if (typeof v === "string") return v;
+
+  if (isStringArray(v)) return v.join("\n\n");
+
+  if (v && typeof v === "object") {
+    // Join any string / string[] values in a predictable order
+    const entries = Object.entries(v as Record<string, unknown>);
+    const parts: string[] = [];
+
+    for (const [, val] of entries) {
+      if (typeof val === "string") parts.push(val);
+      else if (isStringArray(val)) parts.push(val.join("\n\n"));
+    }
+
+    return parts.filter(Boolean).join("\n\n");
+  }
+
+  return "";
+}
+
 function initialsFromName(name: string): string {
   const parts = name
     .trim()
@@ -34,73 +65,21 @@ function initialsFromName(name: string): string {
   return (parts[0].slice(0, 1) + parts[parts.length - 1].slice(0, 1)).toUpperCase();
 }
 
-function stripTitlesAndHonours(name: string): string {
-  // Remove common prefixes and suffixes from the DISPLAY name when mapping to photo filenames.
-  // This means "Dr Emma Davies" -> "Emma Davies", "Professor Tony Avery OBE" -> "Tony Avery"
-  const original = name.trim();
+function normaliseNameForPhoto(name: string): string {
+  // Strip common titles (Dr / Professor / Prof / OBE etc.), then build file slug
+  const stripped = name
+    .replace(/\b(dr|professor|prof)\b\.?/gi, "")
+    .replace(/\b(obe|mbbs|md|phd|msc|bsc)\b\.?/gi, "")
+    .replace(/[^\p{L}\p{N}\s-]/gu, "") // remove punctuation (unicode-safe)
+    .trim();
 
-  // Special-case: if any known typos appear, normalise them here
-  // (this won’t change what you display — only which photo filename we look for)
-  const typoFixed = original.replace(/\bAngathangelou\b/i, "Agathangelou");
-
-  const parts = typoFixed.split(/\s+/).filter(Boolean);
-
-  const prefixes = new Set([
-    "dr",
-    "prof",
-    "professor",
-    "mr",
-    "mrs",
-    "ms",
-    "miss",
-    "sir",
-    "dame",
-  ]);
-
-  const suffixes = new Set([
-    "obe",
-    "mbe",
-    "cbe",
-    "obe,",
-    "mbe,",
-    "cbe,",
-    "phd",
-    "md",
-    "frcp",
-    "frcs",
-  ]);
-
-  // Strip leading prefixes (can be more than one)
-  let i = 0;
-  while (i < parts.length && prefixes.has(parts[i].toLowerCase().replace(/\./g, ""))) {
-    i += 1;
-  }
-
-  // Strip trailing suffixes/honours (can be more than one)
-  let j = parts.length - 1;
-  while (j >= i && suffixes.has(parts[j].toLowerCase().replace(/\./g, ""))) {
-    j -= 1;
-  }
-
-  const core = parts.slice(i, j + 1).join(" ").trim();
-  return core || original;
+  return stripped.toLowerCase().replace(/\s+/g, "_");
 }
 
-function slugifyToPhoto(name: string): string {
-  // matches your Terminal rename: lowercase, spaces -> underscores, remove punctuation, then .png
-  return (
-    name
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "_")
-      .replace(/[^a-z0-9_]/g, "") + ".png"
-  );
-}
-
-function photoUrlForName(displayName: string): string {
-  const coreName = stripTitlesAndHonours(displayName);
-  const file = slugifyToPhoto(coreName);
-  return `/photos/${file}`;
+function photoUrlForName(name: string): string {
+  // Photos are now like: laura_hissey.png
+  const slug = normaliseNameForPhoto(name);
+  return `/photos/${encodeURIComponent(slug)}.png`;
 }
 
 function LogoMark({ subtitle }: { subtitle: string }) {
@@ -131,7 +110,7 @@ export default function SpeakersPage() {
     async function load() {
       setError(null);
       try {
-        const res = await fetch("/data/speakers_FINAL.json", { cache: "no-store" });
+        const res = await fetch("/data/speakers.json", { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json = (await res.json()) as SpeakersPayload;
 
@@ -183,9 +162,16 @@ export default function SpeakersPage() {
           {sorted.map((s, idx) => {
             const name = safeString(s.name) || `Speaker ${idx + 1}`;
             const id = safeString(s.id) || name;
+
             const roleLine = safeString(s.role) || safeString(s.title) || "";
             const orgLine = safeString(s.organisation) || "";
-            const bio = safeString(s.bio) || safeString(s.profile) || "";
+
+            // ✅ Build bio from multiple possible shapes, preserving paragraphs
+            const bioText =
+              textFromUnknown(s.bio) ||
+              textFromUnknown(s.profile) ||
+              textFromUnknown(s.sections) ||
+              "";
 
             const isOpen = expandedId === id;
             const showImage = !imgError[id];
@@ -208,7 +194,7 @@ export default function SpeakersPage() {
                       />
                     ) : (
                       <div className="h-14 w-14 rounded-xl bg-sky-50 ring-1 ring-slate-200 flex items-center justify-center text-sm font-semibold text-slate-700">
-                        {initialsFromName(stripTitlesAndHonours(name))}
+                        {initialsFromName(name)}
                       </div>
                     )}
                   </div>
@@ -220,6 +206,7 @@ export default function SpeakersPage() {
                         {roleLine ? <div className="mt-0.5 text-sm text-slate-700">{roleLine}</div> : null}
                         {orgLine ? <div className="mt-0.5 text-sm text-slate-600">{orgLine}</div> : null}
                       </div>
+
                       <div className="shrink-0 text-sm font-semibold text-slate-600">
                         {isOpen ? "–" : "+"}
                       </div>
@@ -227,8 +214,8 @@ export default function SpeakersPage() {
 
                     {isOpen ? (
                       <div className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
-                        {bio ? (
-                          <p className="whitespace-pre-wrap">{bio}</p>
+                        {bioText ? (
+                          <p className="whitespace-pre-wrap">{bioText}</p>
                         ) : (
                           <p className="text-slate-600">(No speaker bio provided.)</p>
                         )}

@@ -1,0 +1,92 @@
+{
+  "id": "getting-there",
+  "title": "Getting there",
+  "subtitle": "University of Warwick \u2013 The Oculus",
+  "updated_for": "Footsteps to Change 2026",
+  "venue": {
+    "name": "The Oculus, University of Warwick",
+    "postcode": "CV4 7SH",
+    "notes": [
+      "Central Campus venues (including The Oculus) are signposted off Gibbet Hill Road."
+    ],
+    "links": [
+      {
+        "label": "Venue on Google Maps",
+        "url": "https://www.google.co.uk/maps/search/?api=1&query=The+Oculus+University+of+Warwick"
+      },
+      {
+        "label": "Driving directions",
+        "url": "https://www.google.com/maps/dir/?api=1&destination=CV4+7SH"
+      }
+    ]
+  },
+  "travel": [
+    {
+      "mode": "Train",
+      "summary": "Coventry is the most convenient station for most visitors and is on the West Coast Mainline.",
+      "details": [
+        "Coventry is served by regular trains (7 days a week), including services from London Euston, Birmingham (New Street and International) and Leicester.",
+        "From Coventry station it\u2019s easy to get a taxi or bus to campus.",
+        "Canley and Tile Hill stations are also served by trains from London, Milton Keynes, Birmingham, Coventry, Rugby and Northampton (note: neither has a taxi rank\u2014book ahead if you don\u2019t want to walk).",
+        "Leamington Spa is served by trains from Birmingham, Coventry, Oxford, Reading and London Marylebone; buses run to campus from close to the station."
+      ],
+      "links": [
+        {
+          "label": "Plan a train journey (Trainline)",
+          "url": "https://www.thetrainline.com/"
+        }
+      ]
+    },
+    {
+      "mode": "Bus",
+      "summary": "Regular buses run from Coventry city centre, Coventry rail station and Leamington Spa.",
+      "details": [
+        "From Coventry, routes 11 and 12 serve Warwick Conferences (stop: Rail Station Bridge SD on Warwick Road \u2014 ~1 minute walk from Coventry station).",
+        "From Leamington Spa, routes U1 and U2 serve Warwick Conferences (stop: Parish Church Stand B \u2014 ~7 minute walk from Leamington Spa station)."
+      ],
+      "links": [
+        {
+          "label": "Bus information",
+          "url": "https://www.tfwm.org.uk/"
+        }
+      ]
+    },
+    {
+      "mode": "Taxi",
+      "summary": "Taxis are readily available from Coventry station/city centre and from Leamington Spa.",
+      "details": [
+        "If travelling via Canley or Tile Hill stations, book a taxi in advance (no taxi ranks)."
+      ]
+    },
+    {
+      "mode": "Car",
+      "summary": "Campus is well-signposted and easy to reach by road.",
+      "details": [
+        "Use postcode CV4 7SH for sat nav.",
+        "Follow signs for Central Campus / The Oculus, via Gibbet Hill Road."
+      ]
+    }
+  ],
+  "parking": {
+    "summary": "Parking is available across campus. If you\u2019re staying on-site, you\u2019ll receive a link to book parking, or you can register your vehicle when checking in.",
+    "recommended_car_parks": [
+      "Car Park 8",
+      "Car Park 8A",
+      "Car Park 6"
+    ],
+    "accessibility_note": "Blue Badge parking is available in designated bays across campus (follow on-site signage).",
+    "links": [
+      {
+        "label": "University of Warwick parking information",
+        "url": "https://warwick.ac.uk/services/estates/transport/parking/"
+      }
+    ],
+    "assets": [
+      {
+        "label": "Campus parking map",
+        "type": "image",
+        "path": "/mnt/data/warwick_parking_map_1200.png"
+      }
+    ]
+  }
+}
