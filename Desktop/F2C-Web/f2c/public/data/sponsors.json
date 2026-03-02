@@ -1,0 +1,16 @@
+{
+  "title": "Sponsors",
+  "updated_for": "Footsteps to Change 2026",
+  "sponsors": [
+    {
+      "name": "British Pain Society",
+      "logo": "/images/BPS_1024.png",
+      "description": "The British Pain Society (BPS) is the UK’s largest multidisciplinary professional organisation dedicated to improving pain care. Our members span medicine, health, and research, united by a commitment to advancing care through education, advocacy, and collaboration. We work closely with people living with pain to ensure their voices shape our priorities and impact. Through strong partnerships, we support innovation, raise standards of care, and champion equitable access to effective pain management across the UK.\n\nAligned with our vision to help people live well with pain, the BPS promotes high-quality education, builds professional capacity through resources and training, and advocates for pain to be recognised as a major public health issue."
+    },
+    {
+      "name": "Pure Unity Health",
+      "logo": "/images/PureUnityHealth_1024.png",
+      "description": "Pure Unity Health has been a leading NHS partner providing First Contact Practitioners and wider clinical services integrating with Primary Care since 2016.\n\nThey work collaboratively with healthcare systems to deliver high-quality, patient-centred services that improve access, enhance outcomes, and support sustainable workforce models."
+    }
+  ]
+}
